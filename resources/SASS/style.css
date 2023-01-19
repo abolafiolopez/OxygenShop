@@ -101,7 +101,7 @@ nav {
   background-repeat: no-repeat;
   background-size: contain;
   text-align: center;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
 }
 .main-header h2 {
   font-family: Raleway, sans-serif;
@@ -641,7 +641,7 @@ footer {
     border-bottom: 5px solid #08A6E4;
   }
   .main-header {
-    height: 110vh;
+    height: 105vh;
   }
   .main-header h2 {
     font-size: 49px;

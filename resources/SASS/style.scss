@@ -217,7 +217,7 @@ nav {
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 90px);
 
     h2 {
         font-family: $principal-font;
@@ -600,7 +600,7 @@ footer {
 
     //HEADER//
     .main-header {
-        height: 110vh;
+        height: 105vh;
 
         h2 {
             font-size: 49px;
