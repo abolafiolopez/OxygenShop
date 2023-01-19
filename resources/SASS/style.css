@@ -270,6 +270,7 @@ nav {
   border-radius: 18px;
   width: 80%;
   margin-bottom: 60px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
 }
 .first-pricing-section .pricing-section-left {
   display: inline-block;
@@ -326,6 +327,10 @@ nav {
   transform: scale(1.1);
 }
 
+.first-pricing-section:hover {
+  transform: scale(1.1);
+}
+
 .second-pricing-section {
   display: inline-block;
   border: solid #08A6E4 1px;
@@ -333,7 +338,6 @@ nav {
   width: 80%;
   margin-bottom: 60px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-  width: 90%;
 }
 .second-pricing-section .pricing-section-left {
   display: inline-block;
@@ -390,12 +394,17 @@ nav {
   transform: scale(1.1);
 }
 
+.second-pricing-section:hover {
+  transform: scale(1.1);
+}
+
 .third-pricing-section {
   display: inline-block;
   border: solid #55DFB4 1px;
   border-radius: 18px;
   width: 80%;
   margin-bottom: 60px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
 }
 .third-pricing-section .pricing-section-left {
   display: inline-block;
@@ -449,6 +458,10 @@ nav {
   top: 30px;
 }
 .third-pricing-section button:hover {
+  transform: scale(1.1);
+}
+
+.third-pricing-section:hover {
   transform: scale(1.1);
 }
 
@@ -742,7 +755,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 28%;
+    width: 30%;
     margin: 0px;
   }
   .first-pricing-section .pricing-section-left {
@@ -757,9 +770,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 34%;
+    width: 30%;
     margin: 0px;
-    padding: 20px 0;
   }
   .second-pricing-section .pricing-section-left {
     position: static;
@@ -769,14 +781,11 @@ footer {
     text-align: center;
     width: 100%;
   }
-  .second-pricing-section button {
-    top: 50px;
-  }
   .third-pricing-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 28%;
+    width: 30%;
     margin: 0px;
   }
   .third-pricing-section .pricing-section-left {
