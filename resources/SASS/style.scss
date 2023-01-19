@@ -134,7 +134,7 @@ nav {
 
 .menu-logo {
     display: inline-block;
-    width: 80%;
+    width: 82%;
     text-align: start;
     padding: 2% 0 2% 5%;
 
@@ -198,6 +198,17 @@ nav {
     opacity: 1;
     position: fixed;
     height: 150px;
+}
+
+#check-menu:checked ~ label > img {
+    box-sizing: border-box;
+    padding-left: 40px;
+    width: 40px;
+    height: 35px;
+    background-image: url("../images/menucross.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 .main-header {
