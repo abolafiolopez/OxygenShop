@@ -11,6 +11,7 @@ body {
 nav {
   position: sticky;
   top: 0;
+  z-index: 50;
 }
 
 .menu {
@@ -19,7 +20,6 @@ nav {
   min-height: 70px;
   width: 100%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  z-index: 10;
 }
 .menu img {
   cursor: pointer;
@@ -29,6 +29,7 @@ nav {
 .menu-logo {
   display: inline-block;
   width: 80%;
+  text-align: start;
   padding: 2% 0 2% 5%;
 }
 .menu-logo a {
@@ -47,10 +48,9 @@ nav {
   background-color: #FFF;
   opacity: 0;
   visibility: hidden;
-  z-index: 10;
   width: 100%;
   height: 0px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 .menu-mobile ul {
   margin-left: 5%;
@@ -68,7 +68,7 @@ nav {
   color: #A5A5A5;
   text-decoration: none;
 }
-.menu-mobile a:hover {
+.menu-mobile li:hover a {
   font-size: 12px;
   color: #000;
 }
@@ -80,7 +80,7 @@ nav {
 #check-menu:checked ~ .menu-mobile {
   visibility: visible;
   opacity: 1;
-  position: absolute;
+  position: fixed;
   height: 150px;
 }
 
@@ -275,12 +275,12 @@ nav {
   position: relative;
   top: -50px;
   text-align: center;
-  width: 50%;
+  width: 45%;
 }
 .first-pricing-section .pricing-section-right {
   display: inline-block;
   text-align: left;
-  width: 45%;
+  width: 50%;
 }
 .first-pricing-section h3 {
   font-family: Raleway, sans-serif;
@@ -339,12 +339,12 @@ nav {
   position: relative;
   top: -50px;
   text-align: center;
-  width: 50%;
+  width: 45%;
 }
 .second-pricing-section .pricing-section-right {
   display: inline-block;
   text-align: left;
-  width: 45%;
+  width: 50%;
 }
 .second-pricing-section h3 {
   font-family: Raleway, sans-serif;
@@ -401,12 +401,12 @@ nav {
   position: relative;
   top: -50px;
   text-align: center;
-  width: 50%;
+  width: 45%;
 }
 .third-pricing-section .pricing-section-right {
   display: inline-block;
   text-align: left;
-  width: 45%;
+  width: 50%;
 }
 .third-pricing-section h3 {
   font-family: Raleway, sans-serif;
@@ -466,6 +466,7 @@ nav {
 .form-section-first p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -488,10 +489,13 @@ nav {
 .form-section-second li {
   list-style: none;
   margin: 5px 0;
-  border-bottom: 1px solid #08A6E4;
+  border-bottom: 1px solid #A5A5A5;
 }
 .form-section-second label {
   display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
   color: #08A6E4;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -575,15 +579,65 @@ footer {
 }
 
 @media only screen and (min-width: 1000px) {
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menu img {
+    display: none;
+  }
+  .menu-logo {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-mobile {
+    visibility: visible;
+    position: static;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    box-shadow: none;
+  }
+  .menu-mobile ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-mobile li {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 50px;
+  }
+  .menu-mobile li:hover {
+    border-bottom: 5px solid #08A6E4;
+  }
   .main-header {
     height: 110vh;
   }
   .main-header h2 {
-    padding-top: 10vh 0;
+    font-size: 49px;
+    padding-top: 10vh;
+  }
+  .main-header p {
+    padding: 5vh 0;
+  }
+  .first-section h2 {
+    font-size: 36px;
+    font-weight: 400;
   }
   .first-section-wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin: 50px 20% 0;
+  }
+  .second-entries {
+    margin: 5vh 10% 5vh;
+    padding: 5vh 5% 10vh;
   }
   .row-wrap-reverse {
     display: flex;
@@ -594,6 +648,32 @@ footer {
   .description-second-entries {
     width: 50%;
   }
+  .description-second-entries h3 {
+    font-size: 36px;
+  }
+  .description-second-entries p {
+    font-size: 16px;
+  }
+  .laptop-red-circle {
+    margin-top: 50px;
+  }
+  .red-second-circle {
+    left: 60%;
+    border-radius: 25%;
+    rotate: 45deg;
+    width: 150px;
+    height: 150px;
+  }
+  .img-laptop {
+    display: block;
+    box-sizing: border-box;
+    padding-left: 387px;
+    width: 387px;
+    height: 219px;
+    background-image: url("../images/Macbook2 1.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
   .border-bottom-red {
     border-bottom: 2px solid #FB3B64;
     padding-bottom: 40px;
@@ -603,12 +683,32 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
+  .blue-second-circle {
+    width: 300px;
+    height: 300px;
+  }
+  .img-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding-left: 426px;
+    width: 426px;
+    height: 328px;
+    background-image: url("../images/iPhone2 1.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
   .border-bottom-blue {
     border-bottom: 2px solid #08A6E4;
     padding-bottom: 40px;
   }
+  .second-entries-high {
+    margin-right: 0;
+  }
   .high-description {
-    width: 100%;
+    width: 80%;
   }
   .border-bottom-green {
     border-bottom: 2px solid #55DFB4;
@@ -616,20 +716,25 @@ footer {
   }
   .trumpet-green-rectangle {
     margin-top: 0;
-    margin-right: 5%;
+    margin-right: 10%;
   }
   .green-rectangle {
+    padding: 5vh 0;
     height: 100%;
     margin: 0px;
   }
   .green-rectangle img {
     margin-top: 50px;
+    margin-right: 10px;
+  }
+  .third-section {
+    margin-top: 100px;
   }
   .third-section-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 30px 10% 0;
+    margin: 40px 10% 0;
   }
   .first-pricing-section {
     display: flex;
@@ -687,10 +792,15 @@ footer {
   }
   .form-section-first {
     margin-top: 0px;
+    width: 40%;
+  }
+  .form-section-first p {
+    margin-top: 30px;
   }
   .form-section-second {
     margin-top: -30px;
     margin-left: 15%;
+    width: 55%;
   }
   .footer-text {
     margin: 2.5%;

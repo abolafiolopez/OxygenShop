@@ -47,13 +47,13 @@ $secundary-font: "Open Sans", sans-serif;
         position: relative;
         top: -50px;
         text-align: center;
-        width: 50%;
+        width: 45%;
     }
 
     .pricing-section-right {
         display: inline-block;
         text-align: left;
-        width: 45%;
+        width: 50%;
     }
 
     h3 {
@@ -115,15 +115,15 @@ $secundary-font: "Open Sans", sans-serif;
 nav {
     position: sticky;
     top: 0;
+    z-index: 50;
 }
 
 .menu {
     background-color: $principal-white;
-    text-align: left ;
+    text-align:left;
     min-height: 70px;
     width: 100%;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.30);
-    z-index: 10;
 
     img {
         cursor: pointer;
@@ -134,6 +134,7 @@ nav {
 .menu-logo {
     display: inline-block;
     width: 80%;
+    text-align: start;
     padding: 2% 0 2% 5%;
 
     a {
@@ -154,10 +155,9 @@ nav {
     background-color: $principal-white;
     opacity: 0;
     visibility: hidden;
-    z-index: 10;
     width: 100%;
     height: 0px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.30);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.30);
 
     ul {
         margin-left: 5%;
@@ -167,8 +167,9 @@ nav {
     li {
         list-style: none;
         padding: 5px 0;
-    }
 
+        
+    }
     a {
         font-family: $secundary-font;
         font-size: 11px;
@@ -178,9 +179,12 @@ nav {
         text-decoration: none;
     }
 
-    a:hover {
-        font-size: 12px;
-        color: $principal-black;
+    li:hover {
+        
+        a {
+            font-size: 12px;
+            color: $principal-black;
+        }
     }
 }
 
@@ -191,7 +195,7 @@ nav {
 #check-menu:checked ~ .menu-mobile {
     visibility: visible;
     opacity: 1;
-    position: absolute;
+    position: fixed;
     height: 150px;
 }
 
@@ -404,6 +408,7 @@ nav {
     p {
         font-family: $secundary-font;
         font-size: 16px;
+        font-weight: 400;
         margin-top: 10px;
         margin-bottom: 20px;
     }
@@ -429,11 +434,14 @@ nav {
     li {
         list-style: none;
         margin: 5px 0;
-        border-bottom: 1px solid $principal-blue;
+        border-bottom: 1px solid $principal-gray;
     }
 
     label {
         display: block;
+        font-family: $secundary-font;
+        font-size: 11px;
+        font-weight: 600;
         color: $principal-blue;
         margin-top: 50px;
         margin-bottom: 20px;
@@ -520,24 +528,87 @@ footer {
 //MEDIA QUERY//
 @media only screen and (min-width: 1000px) {
 
+    //NAV-MENU//
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-    //HEADER$$
+        img {
+            display: none;
+        }
+    }
+
+    .menu-logo {
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-mobile {
+        visibility: visible;
+        position: static;
+        width: auto;
+        height: auto;
+        opacity: 1;
+        box-shadow: none;
+
+        ul {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            padding: 0 50px;
+        }
+
+        li:hover {
+            border-bottom: 5px solid $principal-blue;
+        }
+    }
+
+    //HEADER//
     .main-header {
         height: 110vh;
 
         h2 {
-            padding-top: 10vh 0;
+            font-size: 49px;
+            padding-top: 10vh;
+        }
+
+        p {
+            padding: 5vh 0;
         }
     }
 
     //FIRST SECTION//
+    .first-section {
+
+        h2{
+            font-size: 36px;
+            font-weight: 400;
+        }
+    }
+
     .first-section-wrap {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        margin: 50px 20% 0;
     }
 
 
     //SECOND SECTION//
+    .second-entries {
+        margin: 5vh 10% 5vh;
+        padding: 5vh 5% 10vh;
+    }
+
     .row-wrap-reverse {
         display: flex;
         flex-direction: row-reverse;
@@ -547,6 +618,37 @@ footer {
 
     .description-second-entries {
         width: 50%;
+
+        h3{
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .laptop-red-circle{
+        margin-top: 50px;
+    }
+
+    .red-second-circle{
+        left: 60%;
+        border-radius: 25%;
+        rotate: 45deg;
+        width: 150px;
+        height: 150px;
+    }
+
+    .img-laptop {
+        display: block;
+        box-sizing: border-box;
+        padding-left: 387px;
+        width: 387px;
+        height: 219px;
+        background-image: url("../images/Macbook2\ 1.png");
+        background-size: auto;
+        background-repeat: no-repeat;
     }
 
     .border-bottom-red {
@@ -560,13 +662,36 @@ footer {
         align-items: center;
     }
 
+    .blue-second-circle {
+        width: 300px;
+        height: 300px;
+    }
+    .img-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding-left: 426px;
+        width: 426px;
+        height: 328px;
+        background-image: url("../images/iPhone2\ 1.png");
+        background-size: auto;
+        background-repeat: no-repeat;
+
+    }
+
     .border-bottom-blue {
         border-bottom: 2px solid $principal-blue;
         padding-bottom: 40px;
     }
 
+    .second-entries-high {
+        margin-right: 0;
+    }
+
     .high-description {
-        width: 100%;
+        width: 80%;
     }
 
     .border-bottom-green {
@@ -576,24 +701,30 @@ footer {
 
     .trumpet-green-rectangle {
         margin-top: 0;
-        margin-right: 5%;
+        margin-right: 10%;
     }
 
     .green-rectangle {
+        padding: 5vh 0;
         height: 100%;
         margin: 0px;
 
         img {
             margin-top: 50px;
+            margin-right: 10px;
         }
     }
 
     //THIRD SECTION//
+    .third-section {
+        margin-top: 100px;
+    }
+
     .third-section-wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 30px 10% 0;
+        margin: 40px 10% 0;
     }
 
     .first-pricing-section {
@@ -656,6 +787,7 @@ footer {
         }
     }
     
+    //FORM SECTION//
     .form-section {
         display: flex;
         justify-content: space-around;
@@ -664,13 +796,21 @@ footer {
 
     .form-section-first {
         margin-top: 0px;
+        width: 40%;
+
+        p {
+            margin-top: 30px;
+        }
     }
 
     .form-section-second {
         margin-top: -30px;
         margin-left: 15%;
+        width: 55%;
     }
 
+
+    //FOOTER//
     .footer-text {
         margin: 2.5%;
     }
