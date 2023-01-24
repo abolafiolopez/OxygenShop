@@ -396,6 +396,7 @@ nav {
 
 .first-pricing-section:hover {
     transform: scale(1.1);
+    transition: all .2s linear;
 }
 
 .second-pricing-section {
@@ -405,6 +406,7 @@ nav {
 
 .second-pricing-section:hover {
     transform: scale(1.1);
+    transition: all .2s linear;
 }
 
 .third-pricing-section {
@@ -414,6 +416,7 @@ nav {
 
 .third-pricing-section:hover {
     transform: scale(1.1);
+    transition: all .2s linear;
 }
 
 //FORM//
@@ -475,8 +478,12 @@ nav {
     input {
         display: inline-block;
         border-style: none;
-        border-bottom: $principal-blue;
+        border-bottom: solid $principal-gray 1px;
         width: 100%;
+    }
+
+    input:focus {
+        outline: none;
     }
 }
 

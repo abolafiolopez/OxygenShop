@@ -339,6 +339,7 @@ nav {
 
 .first-pricing-section:hover {
   transform: scale(1.1);
+  transition: all 0.2s linear;
 }
 
 .second-pricing-section {
@@ -406,6 +407,7 @@ nav {
 
 .second-pricing-section:hover {
   transform: scale(1.1);
+  transition: all 0.2s linear;
 }
 
 .third-pricing-section {
@@ -473,6 +475,7 @@ nav {
 
 .third-pricing-section:hover {
   transform: scale(1.1);
+  transition: all 0.2s linear;
 }
 
 .form-section {
@@ -527,8 +530,11 @@ nav {
 .form-section-second input {
   display: inline-block;
   border-style: none;
-  border-bottom: #08A6E4;
+  border-bottom: solid #A5A5A5 1px;
   width: 100%;
+}
+.form-section-second input:focus {
+  outline: none;
 }
 
 .terms-form {
